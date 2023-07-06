@@ -1,0 +1,10 @@
+/* css code for header tag to be center and bold make its font intreasting and large  change font family to nice one*/
+header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: #000000;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
