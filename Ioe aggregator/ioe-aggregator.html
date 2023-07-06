@@ -1,112 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IOE Aggregator</title>
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width= device-width, initial-scale=1.0" />
+    <title>
+      IOE Aggregator - Total Percentage Calculator and Aggregate Finder.
+    </title>
+    <link rel="stylesheet" href="style.css" />
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZRD7QR6NHH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZRD7QR6NHH"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-ZRD7QR6NHH');
-</script>
-</head>
-<body>
-    <header>Ioe Aggregate Finder</header>
-    
-    <!-- option button with 10 options to choose -->
-    <div class="option">
+      gtag("config", "G-ZRD7QR6NHH");
+    </script>
+    <!-- Meta Tags -->
+    <meta
+      property="title"
+      content="IOE Aggregator - Total Percentage Calculator and Aggregate Finder."
+    />
+    <meta
+      property="description"
+      content="IOE Aggregator is a total percentage calculator and aggregate finder for students in the field of engineering. Calculate your semester-wise percentages, and overall aggregate percentage easily. For IOE students"
+    />
+    <meta
+      name="keywords"
+      content="IOE Aggregator, total percentage calculator, percentage calculator, Aggregate finder, engineering, semester, grades, percentages, faculty, BCE, BCT, BEI, BEX, BIE, BAME, BME, BCE (Civil), BCT (Computer), BEI (Electronics and Information), BEL (Electrical), BGE (Geomatics), BME (Mechanical), BIE (Industrial), BAG (Agriculture), Aerospace, Automobile, Chemistry"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://voidcu.github.io/Ioe%20aggregator/ioe-aggregator.html"
+    />
+    <meta
+      property="og:title"
+      content="IOE Aggregator - Total Percentage Calculator and Aggregate Finder."
+    />
+    <meta
+      property="og:description"
+      content="IOE Aggregator is a total percentage calculator and aggregate finder for students in the field of engineering. Calculate your semester-wise percentages, and overall aggregate percentage easily. For IOE students"
+    />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://voidcu.github.io/Ioe%20aggregator/ioe-aggregator.html"
+    />
+    <meta
+      property="twitter:title"
+      content="IOE Aggregator - Total Percentage Calculator and Aggregate Finder."
+    />
+    <meta
+      property="twitter:description"
+      content="IOE Aggregator is a total percentage calculator and aggregate finder for students in the field of engineering. Calculate your semester-wise percentages, and overall aggregate percentage easily. For IOE students"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>IOE Aggregate Finder</h1>
+    </header>
+    <main>
+      <!-- option button with 10 options to choose -->
+      <div class="option">
         <select name="option" id="faculty" onchange="facultyChange()">
-            <option value="0">Choose faculty</option>
-            <option value="1">BCE (Civil)</option>
-            <option value="2">BCT (Computer)</option>
-            <option value="3">BEI (Electronics and Infomation)</option>
-            <option value="4">BEL (Electrical)</option>
-            <option value="5">BGE (Geomatics)</option>
-            <option value="6">BME (Mechanical)</option>
-            <option value="7">BIE (Industrial)</option>
-            <option value="8">BAG (Agriculture)</option>
-            <option value="9">Aerospace</option>
-            <option value="10">Automobile</option>
-            <option value="11">Chemistry</option>
+          <option value="0">Choose faculty</option>
+          <option value="1">BCE (Civil)</option>
+          <option value="2">BCT (Computer)</option>
+          <option value="3">BEI (Electronics and Infomation)</option>
+          <option value="4">BEL (Electrical)</option>
+          <option value="5">BGE (Geomatics)</option>
+          <option value="6">BME (Mechanical)</option>
+          <option value="7">BIE (Industrial)</option>
+          <option value="8">BAG (Agriculture)</option>
+          <option value="9">Aerospace</option>
+          <option value="10">Automobile</option>
+          <option value="11">Chemistry</option>
         </select>
-    </div>
-    <div>
+      </div>
+      <div>
         <table>
-            <tr>
-                <th>Semester</th>
-                <th>Full marks</th>
-                <th>Marks obtained</th>
-                <th>Percentage</th>
-                <th>Aggregate%</th>
-            </tr>
-            <!-- 8 rows containg data as per above where 3rd column of each row is input field -->
-            <tr>
-                <td>First</td>
-                <td id="fm1">0</td>
-                <td><input type="number" id="sem1" onkeyup="calculate(1)"></td>
-                <td id="per1">0%</td>
-                <td id="ag1">0%</td>
-            </tr>
-            <tr>
-                <td>Second</td>
-                <td id="fm2">0</td>
-                <td><input type="number" id="sem2" onkeyup="calculate(2)"></td>
-                <td id="per2">0%</td>
-                <td id="ag2">0%</td>
-            </tr>
-            <tr>
-                <td>Third</td>
-                <td id="fm3">0</td>
-                <td><input type="number" id="sem3" onkeyup="calculate(3)"></td>
-                <td id="per3">0%</td>
-                <td id="ag3">0%</td>
-            </tr>
-            <tr>
-                <td>Forth</td>
-                <td id="fm4">0</td>
-                <td><input type="number" id="sem4" onkeyup="calculate(4)"></td>
-                <td id="per4">0%</td>
-                <td id="ag4">0%</td>
-            </tr>
-            <tr>
-                <td>fifth</td>
-                <td id="fm5">0</td>
-                <td><input type="number" id="sem5" onkeyup="calculate(5)"></td>
-                <td id="per5">0%</td>
-                <td id="ag5">0%</td>
-            </tr>
-            <tr>
-                <td>Sixth</td>
-                <td id="fm6">0</td>
-                <td><input type="number" id="sem6" onkeyup="calculate(6)"></td>
-                <td id="per6">0%</td>
-                <td id="ag6">0%</td>
-            </tr>
-            <tr>
-                <td>Seventh</td>
-                <td id="fm7">0</td>
-                <td><input type="number" id="sem7" onkeyup="calculate(7)"></td>
-                <td id="per7">0%</td>
-                <td id="ag7">0%</td>
-            </tr>
-            <tr>
-                <td>Eighth</td>
-                <td id="fm8">0</td>
-                <td><input type="number" id="sem8" onkeyup="calculate(8)"></td>
-                <td id="per8">0%</td>
-                <td id="ag8">0%</td>
-            </tr>
+          <tr>
+            <th>Semester</th>
+            <th>Full marks</th>
+            <th>Marks obtained</th>
+            <th>Percentage</th>
+            <th>Aggregate%</th>
+          </tr>
+          <!-- 8 rows containg data as per above where 3rd column of each row is input field -->
+          <tr>
+            <td>First</td>
+            <td id="fm1">0</td>
+            <td><input type="number" id="sem1" onkeyup="calculate(1)" /></td>
+            <td id="per1">0%</td>
+            <td id="ag1">0%</td>
+          </tr>
+          <tr>
+            <td>Second</td>
+            <td id="fm2">0</td>
+            <td><input type="number" id="sem2" onkeyup="calculate(2)" /></td>
+            <td id="per2">0%</td>
+            <td id="ag2">0%</td>
+          </tr>
+          <tr>
+            <td>Third</td>
+            <td id="fm3">0</td>
+            <td><input type="number" id="sem3" onkeyup="calculate(3)" /></td>
+            <td id="per3">0%</td>
+            <td id="ag3">0%</td>
+          </tr>
+          <tr>
+            <td>Forth</td>
+            <td id="fm4">0</td>
+            <td><input type="number" id="sem4" onkeyup="calculate(4)" /></td>
+            <td id="per4">0%</td>
+            <td id="ag4">0%</td>
+          </tr>
+          <tr>
+            <td>fifth</td>
+            <td id="fm5">0</td>
+            <td><input type="number" id="sem5" onkeyup="calculate(5)" /></td>
+            <td id="per5">0%</td>
+            <td id="ag5">0%</td>
+          </tr>
+          <tr>
+            <td>Sixth</td>
+            <td id="fm6">0</td>
+            <td><input type="number" id="sem6" onkeyup="calculate(6)" /></td>
+            <td id="per6">0%</td>
+            <td id="ag6">0%</td>
+          </tr>
+          <tr>
+            <td>Seventh</td>
+            <td id="fm7">0</td>
+            <td><input type="number" id="sem7" onkeyup="calculate(7)" /></td>
+            <td id="per7">0%</td>
+            <td id="ag7">0%</td>
+          </tr>
+          <tr>
+            <td>Eighth</td>
+            <td id="fm8">0</td>
+            <td><input type="number" id="sem8" onkeyup="calculate(8)" /></td>
+            <td id="per8">0%</td>
+            <td id="ag8">0%</td>
+          </tr>
         </table>
-        <div>
-            Total percentage : <span id="totalPercentage">0%</span>
-        </div>
-    </div>
+        <div>Total percentage : <span id="totalPercentage">0%</span></div>
+      </div>
+    </main>
 
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
