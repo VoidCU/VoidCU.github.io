@@ -1,10 +1,151 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    transition: transform 0.3s ease;
+}
+
 /* css code for header tag to be center and bold make its font intreasting and large  change font family to nice one*/
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background-color:#181019 ;
+}
+
 header {
     text-align: center;
     font-weight: bold;
     font-size: 30px;
-    color: #000000;
-    margin: 0px;
-    padding: 0px;
+    color: #F4DCB9;
     font-family: 'Times New Roman', Times, serif;
+    padding: 2%;
 }
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-around;       
+    height: 70%;
+    width: 100%;
+}
+
+.sheet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+table {
+    align-items: center;
+    text-align: center;
+    width: 75%;
+    /* border-collapse: collapse; */
+    table-layout: fixed;
+    
+  }
+  
+  table td, table th {
+    border: 1px solid #CCCCCC;
+    font-size: 16px; /* Increase the font size for better readability */
+  }
+  
+  table td:nth-child(3) input[type="number"] {
+    appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  box-sizing: border-box;
+
+  /* Remove spinner arrows */
+  -moz-appearance: textfield;
+  appearance: textfield;
+  }
+ 
+  table th {
+    padding: 12px;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #F4DCB9;
+  }
+
+  table tr:nth-child(odd) {
+    background-color: #F7E5CA;
+  }
+  
+  table tr:hover {
+    background-color: #F7E5C0;
+  }
+
+
+
+
+#display{
+    display: flex;
+    align-items: center;
+    color: #F7E5CA;
+    height: 100%;
+    font-weight: 600;
+    font-size: 30px;
+    /* padding: 50px; */
+}
+
+#faculty{
+    padding: 10px;
+    background-color: #000000;
+    color: #D59386;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 800;
+}
+#faculty_selection{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    width: 25%;
+}
+option{
+    border-radius: 50%;
+    font-size: 20px;
+    color: #D59386;
+    background-color: #181019;
+}
+
+#resetIcon{
+    transition: transform 0.3s ease;
+    height: 30px;
+}
+
+#resetIcon:hover{
+    cursor: pointer;
+    transform: scale(1.2)rotate(60deg);   
+}
+/* make footer always at buttom width 100% items in center*/
+footer{
+    padding: 5px;
+    background-color: #D59386;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    bottom: 0px;
+
+}
+footer a{
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+

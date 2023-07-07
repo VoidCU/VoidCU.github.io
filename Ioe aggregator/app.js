@@ -47,3 +47,16 @@ function calculate(sem){
     }
     document.getElementById("totalPercentage").innerHTML=totalPercentage.toFixed(2)+"%";
 }
+
+function reset(){
+    for(i=1;i<=8;i++){
+        document.getElementById("sem"+i).value="";
+    }
+    for(i=1;i<=8;i++){
+        document.getElementById("per"+i).innerHTML="0%";
+    }
+    for(i=1;i<=8;i++){
+        document.getElementById("ag"+i).innerHTML="0%";
+    }
+    document.getElementById("totalPercentage").innerHTML="0.00%";
+}
