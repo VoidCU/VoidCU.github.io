@@ -49,6 +49,7 @@ table {
   
   table td, table th {
     border: 1px solid #CCCCCC;
+    font-weight: 600;
     font-size: 16px; /* Increase the font size for better readability */
   }
   
