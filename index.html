@@ -1,43 +1,306 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VoidCU</title>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-ZRD7QR6NHH"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+<html lang="en" class="scroll-smooth">
 
-      gtag("config", "G-ZRD7QR6NHH");
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elytra Solutions - Your IT solutions</title>
+    <meta name="description"
+        content="Elytra Solutions is a leading technology company specializing in software development, blockchain development, web development, and app development services.">
+    <meta name="keywords"
+        content="Elytra Solutions, software development, blockchain development, web development, app development, technology company">
+    <meta name="author" content="Elytra Solutions">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Elytra Solutions - Software, Blockchain, Web, and App Development">
+    <meta property="og:description"
+        content="Elytra Solutions is a leading technology company specializing in software development, blockchain development, web development, and app development services.">
+    <meta property="og:image" content="https://www.elytrasolutions.me/elytra_solution_logo.png">
+    <meta property="og:url" content="https://www.elytrasolutions.me">
+    <meta name="twitter:title" content="Elytra Solutions - Software, Blockchain, Web, and App Development">
+    <meta name="twitter:description"
+        content="Elytra Solutions is a leading technology company specializing in software development, blockchain development, web development, and app development services.">
+    <meta name="twitter:image" content="https://www.elytrasolutions.me/elytra_solution_logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <script src="https://unpkg.com/three@0.124.0/build/three.js"></script>
+    
+    <nav class="bg-white fixed w-full z-20 top-0 left-0 border-b border-gray-200">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center">
+                        <img src="navlogo.png" class="h-8 mr-2" alt="Elytra Logo">
+                        <span class="text-xl font-semibold">Elytra Solutions</span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-4 flex items-center md:ml-6">
+                        <a href="#"
+                            class="text-gray-900 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#about"
+                            class="text-gray-900 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#services"
+                            class="text-gray-900 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                        <a href="#contact"
+                            class="text-gray-900 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden mr-2">
+                    <button id="mobile-menu-toggle"
+                        class="text-gray-500 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-200 rounded-md p-2">
+                        <span class="sr-only">Open menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#"
+                    class="text-gray-900 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#"
+                    class="text-gray-900 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#"
+                    class="text-gray-900 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#"
+                    class="text-gray-900 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Your webpage content goes here -->
+    <!-- hero section -->
+    <section class="bg-blue-400 text-white py-16">
+        <div class="max-w-screen-xl mx-auto px-4 pt-10 sm:px-6 lg:px-8 container mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Welcome to Elytra Solutions</h1>
+            <p class="text-lg md:text-xl mb-8">Your Partner in Software, Blockchain, Web, and App Development</p>
+            <a href="#contact"
+                class="bg-white hover:bg-gray-600 text-blue-500 hover:text-white py-2 px-6 rounded-full text-lg font-medium transition duration-300 ease-in-out transform hover:scale-105">Get
+                Started</a>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="bg-white py-16">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 container mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-4">About Elytra Pvt. Ltd.</h2>
+            <p class="text-lg text-gray-900">Elytra Pvt. Ltd. is an energetic IT company with a vision to revolutionize businesses and organizations globally through innovative solutions. Founded by a team of enthusiastic IT professionals, we were deeply inspired by the boundless potential of information technology, and our mission is to lead groundbreaking advancements both in Nepal and on an international scale.</p>
+    
+            <!-- Interactive Element: 3D Animation -->
+            <div id="interactive-3d" class="mt-8 w-full h-64 lg:h-96"></div>
+    
+            <p class="text-lg text-gray-900 mt-8">At Elytra, we take immense pride in our dedicated and expert IT team, committed to delivering the most effective solutions and unwavering support. We meticulously analyze every aspect of your business to provide tailor-made solutions that precisely meet your needs. Our dedication to customer satisfaction doesn't end with project completion; we offer exceptional round-the-clock support whenever you require assistance.</p>
+    
+            <!-- Blockchain and Web 3.0 -->
+            <p class="text-lg text-gray-900 mt-8">We specialize in crafting, implementing, and managing impactful social media marketing campaigns, empowering businesses to forge a distinct identity and establish personal connections with their target audience across popular networks.</p>
+            
+            <p class="text-lg text-gray-900 mt-8">Elytra Pvt. Ltd. is deeply rooted in the belief of delivering services that bring positive transformations to our clients. Operating with a young, passionate, and determined team in Nepal, we continually strive to provide outstanding and timely services.</p>
+            
+            <p class="text-lg text-gray-900 mt-8">Fueled by our fervor for web development, design, SEO, digital marketing, blockchain, and web 3.0 technologies, we offer premium solutions for web development, web design, SEO, and social media branding.</p>
+    
+            <p class="text-lg text-gray-900 mt-8">When it comes to your website and mobile application development needs, trust Elytra Pvt. Ltd. as your reliable partner, propelling your business to unparalleled success.</p>
+        </div>
+    </section>
+
+    <!-- services -->
+    <section id="services" class="bg-gray-100 py-16">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 container mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-4">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-200 p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold mb-2">Service 1</h3>
+                    <p class="text-gray-700">Description of Service 1.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-gray-200 p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold mb-2">Service 2</h3>
+                    <p class="text-gray-700">Description of Service 2.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-gray-200 p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold mb-2">Service 3</h3>
+                    <p class="text-gray-700">Description of Service 3.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="bg-white py-16">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 container mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-4">Our Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="bg-gray-200 p-4 rounded-lg shadow">
+                    <img src="portfolio-image-1.jpg" alt="Portfolio Item 1" class="mb-2 rounded-lg">
+                    <h3 class="text-lg font-semibold mb-2">Project 1</h3>
+                    <p class="text-gray-700">Description of Project 1.</p>
+                </div>
+                <!-- Portfolio Item 2 -->
+                <div class="bg-gray-200 p-4 rounded-lg shadow">
+                    <img src="portfolio-image-2.jpg" alt="Portfolio Item 2" class="mb-2 rounded-lg">
+                    <h3 class="text-lg font-semibold mb-2">Project 2</h3>
+                    <p class="text-gray-700">Description of Project 2.</p>
+                </div>
+                <!-- Portfolio Item 3 -->
+                <div class="bg-gray-200 p-4 rounded-lg shadow">
+                    <img src="portfolio-image-3.jpg" alt="Portfolio Item 3" class="mb-2 rounded-lg">
+                    <h3 class="text-lg font-semibold mb-2">Project 3</h3>
+                    <p class="text-gray-700">Description of Project 3.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="bg-gray-100 py-16">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 container mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-4">What Our Clients Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-200 p-6 rounded-lg shadow">
+                    <p class="text-lg text-gray-700">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non libero nec odio vehicula commodo."</p>
+                    <p class="text-gray-600 font-semibold mt-2">John Doe</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-200 p-6 rounded-lg shadow">
+                    <p class="text-lg text-gray-700">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."</p>
+                    <p class="text-gray-600 font-semibold mt-2">Jane Smith</p>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-200 p-6 rounded-lg shadow">
+                    <p class="text-lg text-gray-700">"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur."</p>
+                    <p class="text-gray-600 font-semibold mt-2">David Johnson</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="bg-white py-16">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 container mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-4">Meet Our Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-gray-200 p-4 rounded-lg shadow">
+                    <img src="team-member-1.jpg" alt="Team Member 1" class="mb-2 rounded-full w-20 h-20 mx-auto">
+                    <h3 class="text-lg font-semibold mb-2">John Doe</h3>
+                    <p class="text-gray-700">Position</p>
+                    <div class="mt-2">
+                        <a href="#" class="text-blue-500 hover:underline">LinkedIn</a>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="bg-gray-200 p-4 rounded-lg shadow">
+                    <img src="team-member-2.jpg" alt="Team Member 2" class="mb-2 rounded-full w-20 h-20 mx-auto">
+                    <h3 class="text-lg font-semibold mb-2">Jane Smith</h3>
+                    <p class="text-gray-700">Position</p>
+                    <div class="mt-2">
+                        <a href="#" class="text-blue-500 hover:underline">LinkedIn</a>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="bg-gray-200 p-4 rounded-lg shadow">
+                    <img src="team-member-3.jpg" alt="Team Member 3" class="mb-2 rounded-full w-20 h-20 mx-auto">
+                    <h3 class="text-lg font-semibold mb-2">David Johnson</h3>
+                    <p class="text-gray-700">Position</p>
+                    <div class="mt-2">
+                        <a href="#" class="text-blue-500 hover:underline">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section id="contact" class="bg-gray-600 text-white py-16">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 container mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-4">Contact Us</h2>
+            <p class="text-lg mb-8">Have questions or want to get in touch? Reach out to us!</p>
+            <a href="mailto:info@example.com" class="text-lg font-medium underline">info@example.com</a>
+            <p class="mt-2">123 Main Street, City</p>
+            <p>Phone: +1 (123) 456-7890</p>
+        </div>
+    </section>
+
+    <footer class="bg-white">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="index.html" class="flex items-center mb-4 sm:mb-0">
+                    <img src="navlogo.png" class="h-8 mr-3" alt="Flowbite Logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap">Flowbite</span>
+                </a>
+                <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0">
+                    <li>
+                        <a href="#" class="mr-4 hover:underline md:mr-6">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
+            <span class="block text-sm text-gray-500 sm:text-center">© 2023 <a href="https://flowbite.com/"
+                    class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Set up the scene, camera, and renderer
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('interactive-3d').appendChild(renderer.domElement);
+    
+        // Create a cube and add it to the scene
+        const geometry = new THREE.BoxGeometry();
+        const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+        const cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
+    
+        // Set the initial camera position
+        camera.position.z = 5;
+    
+        // Create an animation function
+        const animate = () => {
+            requestAnimationFrame(animate);
+    
+            // Rotate the cube
+            cube.rotation.x += 0.01;
+            cube.rotation.y += 0.01;
+    
+            renderer.render(scene, camera);
+        };
+    
+        // Start the animation
+        animate();
     </script>
-    <!-- Meta tags -->
-    <meta
-      property="title"
-      content="IOE Aggregator - Total Percentage Calculator and Aggregate Finder."
-    />
-    <meta
-      property="description"
-      content="IOE Aggregator is a total percentage calculator and aggregate finder for students in the field of engineering. Calculate your semester-wise percentages, and overall aggregate percentage easily. For IOE students"
-    />
-    <meta
-      name="keywords"
-      content="IOE Aggregator, total percentage calculator, percentage calculator, Aggregate finder, engineering, semester, grades, percentages, faculty, BCE, BCT, BEI, BEX, BIE, BAME, BME, BCE (Civil), BCT (Computer), BEI (Electronics and Information), BEL (Electrical), BGE (Geomatics), BME (Mechanical), BIE (Industrial), BAG (Agriculture), Aerospace, Automobile, Chemistry"
-    />
-  </head>
-  <body>
-    <button>
-      <a href="Ioe aggregator\index.html">IOE Aggregator</a>
-    </button>
-    <button>
-      <a href="Random color Finder\index.html">Random color finder</a>
-    </button>
-  </body>
+
+</body>
+
 </html>
