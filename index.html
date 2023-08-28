@@ -26,6 +26,9 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+
 </head>
 
 <body>
@@ -82,12 +85,12 @@
 
     <!-- Your webpage content goes here -->
     <!-- hero section -->
-    <section class="bg-blue-400 text-white py-16">
+    <section class="bg-[#4ac1d9] text-white py-16">
         <div class="max-w-screen-xl mx-auto px-4 pt-10 sm:px-6 lg:px-8 container mx-auto text-center">
             <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Welcome to Elytra Solutions</h1>
             <p class="text-lg md:text-xl mb-8">Your Partner in Software, Blockchain, Web, and App Development</p>
             <a href="#contact"
-                class="bg-white hover:bg-gray-600 text-blue-500 hover:text-white py-2 px-6 rounded-full text-lg font-medium transition duration-300 ease-in-out transform hover:scale-105">Get
+                class="bg-white hover:bg-gray-600 text-[#4AC1D9] hover:text-white py-2 px-6 rounded-full text-lg font-medium transition duration-300 ease-in-out transform hover:scale-105">Get
                 Started</a>
         </div>
     </section>
@@ -119,24 +122,55 @@
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 container mx-auto text-center">
             <h2 class="text-3xl font-semibold mb-4">Our Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
+                <!-- Service 1: Web Development -->
                 <div class="bg-gray-200 p-6 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold mb-2">Service 1</h3>
-                    <p class="text-gray-700">Description of Service 1.</p>
+                    <i class="fas fa-globe text-3xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+                    <p class="text-gray-700">Crafting innovative and visually appealing websites tailored to your unique needs. Our web development services redefine your online presence.</p>
                 </div>
-                <!-- Service 2 -->
+                <!-- Service 2: Software Development -->
                 <div class="bg-gray-200 p-6 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold mb-2">Service 2</h3>
-                    <p class="text-gray-700">Description of Service 2.</p>
+                    <i class="fas fa-code text-3xl text-green-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Software Development</h3>
+                    <p class="text-gray-700">Building custom software solutions that meet your business requirements. Our software development services drive efficiency and growth.</p>
                 </div>
-                <!-- Service 3 -->
+                <!-- Service 3: Other IT Services -->
                 <div class="bg-gray-200 p-6 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold mb-2">Service 3</h3>
-                    <p class="text-gray-700">Description of Service 3.</p>
+                    <i class="fas fa-cogs text-3xl text-purple-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Other IT Services</h3>
+                    <p class="text-gray-700">A wide range of IT services, including consulting, maintenance, and support. We provide comprehensive solutions to enhance your IT infrastructure.</p>
+                </div>
+                <!-- Service 4: Blockchain -->
+                <div class="bg-gray-200 p-6 rounded-lg shadow">
+                    <i class="fas fa-cube text-3xl text-orange-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Blockchain</h3>
+                    <p class="text-gray-700">Harnessing the power of blockchain technology to secure and streamline your business operations. Our blockchain solutions offer transparency and trust.</p>
+                </div>
+                <!-- Service 5: LMS Course Design -->
+                <div class="bg-gray-200 p-6 rounded-lg shadow">
+                    <i class="fas fa-graduation-cap text-3xl text-blue-500"></i>
+                    <h3 class="text-xl font-semibold mb-2">LMS Course Design</h3>
+                    <p class="text-gray-700">Creating engaging and effective e-learning experiences. Our LMS course design ensures a dynamic and interactive learning environment.</p>
+                </div>
+                <!-- Service 6: SEO Optimization -->
+                <div class="bg-gray-200 p-6 rounded-lg shadow">
+                    <i class="fas fa-search text-3xl text-pink-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">SEO Optimization</h3>
+                    <p class="text-gray-700">Boosting your online visibility through SEO strategies that drive organic traffic and improve search engine rankings.</p>
+                </div>
+                <!-- Service 7: Research -->
+                <div class="bg-gray-200 p-6 rounded-lg shadow md:col-start-2 md:col-span-1">
+                    <i class="fas fa-flask text-3xl text-red-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Research</h3>
+                    <p class="text-gray-700">Conducting in-depth research to provide data-driven insights that inform your business decisions and strategies.</p>
                 </div>
             </div>
         </div>
     </section>
+    
+    
+    
+
 
     <!-- Portfolio -->
     <!-- <section class="bg-white py-16">
@@ -169,11 +203,11 @@
     <section class="bg-gray-100 py-16">
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 container mx-auto text-center">
             <h2 class="text-3xl font-semibold mb-4 pb-10">Our Clients</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center justify-center">
-                <a href="http://www.ripple.com.np"><img class="h-40" src="ripple.png" alt="Ripple"></a>
-                <img class="h-40 rounded-[50%] mx-auto" src="dfanlogo.png" alt="DFAN">
-                <img class="h-40" src="kathmanduFashion.png" alt="FashionKathmandu">
-                <img class="h-20 mx-auto" src="engnep.png" alt="DFAN">
+            <div class="flex flex-wrap gap-20 justify-center">
+                <a href="http://www.ripple.com.np"><img class="h-40 shadow-2xl p-4" src="ripple.png" alt="Ripple"></a>
+                <img class="h-40 rounded-[50%] mx-auto p-4 shadow-2xl" src="dfanlogo.png" alt="DFAN">
+                <img class="h-40 p-4 shadow-2xl" src="kathmanduFashion.png" alt="FashionKathmandu">
+                <img class="h-24 mx-auto p-4 shadow-2xl" src="engnep.png" alt="DFAN">
             </div>
         </div>
     </section>
@@ -182,7 +216,10 @@
     <section class="bg-white py-16">
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 container mx-auto text-center">
             <h2 class="text-3xl font-semibold mb-4">Core Team</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> -->
+                
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mx-auto">
                 <!-- Team Member 1 -->
                 <div class="bg-gray-200 p-4 rounded-lg shadow">
                     <img src="AnishPoudel.jpg" alt="Team Member 1" class="mb-2 rounded-full w-40 h-40 mx-auto object-cover">
@@ -232,9 +269,18 @@
                 <div class="bg-gray-200 p-4 rounded-lg shadow">
                     <img src="SubarnaPoudel.jpg" alt="Team Member 1" class="mb-2 rounded-full w-40 h-40 mx-auto object-cover">
                     <h3 class="text-lg font-semibold mb-2">Subarna Poudel</h3>
-                    <p class="text-gray-700">Entertainment Head</p>
+                    <p class="text-gray-700">Manager</p>
                     <div class="mt-2">
                         <a href="https://www.linkedin.com/in/subarna-poudel-655a17216/" class="text-blue-500 hover:underline">LinkedIn</a>
+                    </div>
+                </div>
+                <!-- Team Member 7 -->
+                <div class="bg-gray-200 p-4 rounded-lg shadow md:col-start-2 md:col-span-1">
+                    <img src="kapilShrestha.jpg" alt="Team Member 1" class="mb-2 rounded-full w-40 h-40 mx-auto object-cover">
+                    <h3 class="text-lg font-semibold mb-2">Kapil Shrestha</h3>
+                    <p class="text-gray-700">Manager</p>
+                    <div class="mt-2">
+                        <a href="https://www.linkedin.com/in/kapil-shrestha-777526215/" class="text-blue-500 hover:underline">LinkedIn</a>
                     </div>
                 </div>
             </div>
